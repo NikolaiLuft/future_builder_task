@@ -4,10 +4,10 @@ class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 
   @override
-  State<MainScreen> createState() => _MainScreenState();
+  State<MainScreen> createState() => MainScreenState();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class MainScreenState extends State<MainScreen> {
   final TextEditingController zipController = TextEditingController();
   Future<String>? cityFuture;
 
@@ -41,7 +41,6 @@ class _MainScreenState extends State<MainScreen> {
                 const SizedBox(height: 32),
                 OutlinedButton(
                   onPressed: () {
-                    // TODO: implementiere Suche
                     setState(() {
                       cityFuture = getCityFromZip(zipController.text);
                     });
